@@ -1,0 +1,52 @@
+DoorType = {"func_door","prop_door_rotating","func_door_rotating"}
+Properties = {}
+PPrice = "100" --Price per door per property (A building with 4 doors costs 300)
+
+function AddProperty(map, name, tab)
+	if !map or !name or !tab then return end
+	if !Properties[map] then
+		Properties[map] = {}
+	end
+	Properties[map][name] = tab
+end
+
+AddProperty("basewars_downtown_v2a", "Garage", {Vector(-1504,-2435,-136), Vector(-1613,-2433,-142), Vector(-1296.0200195313,-2435.5,-118), Vector(-1140.5200195313,-2435.5,-118)})
+AddProperty("basewars_downtown_v2a", "Foto Shop", {Vector(-944,-2144,-142),Vector(-889.75,-1949.0100097656,-77),Vector(-889.75,-2081,-77),Vector(-872,-1614,-142),Vector(-1046,-1662,-142)})
+AddProperty("basewars_downtown_v2a", "Apartment Block 1", {Vector(-1046,-2242,-142),Vector(-872,-2086,-14),Vector(-872,-1702,-14),Vector(-872,-1702,114),Vector(-872,-1958,114)})
+AddProperty("basewars_downtown_v2a", "Apartment Block 2", {Vector(-1037,-1063,-142),Vector(-1037,-1163,-142),Vector(-818,-1363,-142),Vector(-818,-1363,-6),Vector(-810,-1300,-5.7186999320984),Vector(-816,-1363,122),Vector(-810,-1303,122),Vector(-810,-1303,250),Vector(-819,-1516,378),Vector(-810,-1303,378),Vector(-798,-920.15002441406,378),Vector(-853,-941,506),Vector(-724,-1082.0899658203,506),Vector(-925,-941,122),
+Vector(-856,-1005,122),Vector(-749,-1282,344),Vector(-749,-1226,344),Vector(-749,-942,344),Vector(-749,-998,344),Vector(-749,-1282,216),Vector(-856,-1005,122),Vector(-925,-941,122),Vector(-749,-1282,88),Vector(-749,-1226,88),Vector(-925,-941,-6.0001997947693),Vector(-856,-1005,-6.0001997947693),Vector(-749,-1282,-40),Vector(-749,-1226,-40)})
+AddProperty("basewars_downtown_v2a", "Shop 1", {Vector(-1459,-455,-142)})
+AddProperty("basewars_downtown_v2a", "Shop 2", {Vector(-1459,-345,-142),Vector(-1767,-391,-142)})
+AddProperty("basewars_downtown_v2a", "Police Station", {Vector(-1477,124,-106),Vector(-1669,151,-106),Vector(-1997,66,-106),Vector(-1669,369,-106),Vector(-2162,-125,-106),Vector(-2162,40,-106),Vector(-2162,207,-106)})
+AddProperty("basewars_downtown_v2a", "Furniture Store", {Vector(-1441.9100341797,428,-141.71899414063),Vector(-1441.9100341797,522,-141.71899414063),Vector(-1439.5,653,-102)})
+AddProperty("basewars_downtown_v2a", "Cafe Baltic", {Vector(-1005.9299926758,308.36401367188,-141.71899414063),Vector(-841,192,250)})
+AddProperty("basewars_downtown_v2a", "Grocery Store", {Vector(-838,1990,-140),Vector(-892,961,-140)})
+AddProperty("basewars_downtown_v2a", "Warehouse 1", {Vector(-651,970,-86),Vector(-500,976.5,-78),Vector(-269,1017,-141.71899414063),Vector(-200,1222,-125),Vector(-96,1222,-125),Vector(-17,1519,-141.71899414063)})
+AddProperty("basewars_downtown_v2a", "Bank", {Vector(-305,63,-10),Vector(-305,63,118),Vector(-495.9700012207,150.00999450684,119.98999786377)})
+AddProperty("basewars_downtown_v2a", "Sewers", {Vector(-663,144.99899291992,-149.7200012207),Vector(-789,56.999401092529,-142.00100708008),Vector(-399.9700012207,149.35000610352,-136.00999450684),Vector(-496.0299987793,149.35000610352,-136.00999450684),Vector(-578,-99,-265.71899414063),Vector(-1008,-46.000598907471,-401.7200012207),Vector(-1764,-299,-401.71899414063),Vector(-1853,-410,-401.71899414063)})
+AddProperty("basewars_downtown_v2a", "Subway", {Vector(-1005,1217,-554),Vector(-1051,1679,-554),Vector(-1297,1704,-554),Vector(-1297,1637,-394)})
+AddProperty("basewars_downtown_v2a", "Train Depot", {Vector(-487,1630,-394),Vector(245,1084,-394),Vector(2388.5,750,-392)})
+AddProperty("basewars_downtown_v2a", "Bank Basement", {Vector(-51,-342,-265.71899414063),Vector(-51,-199,-322.17999267578),Vector(-223,283,-322.17999267578),Vector(145,-187,-322.17999267578)})
+AddProperty("basewars_downtown_v2a", "Small Bar", {Vector(497,1609,-142),Vector(987,1543,-142),Vector(923,1759,2)})
+AddProperty("basewars_downtown_v2a", "Secure Store", {Vector(509,1041,-14),Vector(837,1279,-142),Vector(766,1251.5,-105),Vector(714,1251.5,-136),Vector(497,1139,-142)})
+AddProperty("basewars_downtown_v2a", "Warehouse 2", {Vector(-526.5,3820,-102),Vector(-526.5,3586,-102),Vector(-523,3286,-142),Vector(-995,3391,-142),Vector(-1300,3391,-142)})
+AddProperty("basewars_downtown_v2a", "Penthouse", {Vector(798,3388,14),Vector(1225,3013,14),Vector(1065,2913,14)})
+AddProperty("basewars_downtown_v2a", "Small Storage Cupboard", {Vector(1337,2653,-142)})
+AddProperty("basewars_downtown_v2a", "Large Office", {Vector(917,2879,-142),Vector(833,3325,-142),Vector(937,3439,-142),Vector(913,3698,-142),Vector(1450,3439,-142),Vector(1461,3299,-142)})
+AddProperty("basewars_downtown_v2a", "Small Store", {Vector(1795,3575,-142),Vector(2047,3517,-142),Vector(2319,3443,-142)})
+AddProperty("basewars_downtown_v2a", "Dual Apartments", {Vector(3259,3433,-9),Vector(3023,3458,-9),Vector(2833,3382,-142),Vector(3009,3372,-142),Vector(3009,3561,-142),Vector(3080,3183,-142),Vector(4104,3333,-142),Vector(3936,3239,-142),Vector(3797,3115,-9),Vector(3678,3432,-9)})
+AddProperty("basewars_downtown_v2a", "Luxury Apartment Block", {Vector(2565,4657,-82),Vector(2565,4785,-82),Vector(2949,4785,-82),Vector(3269,4785,-82),Vector(3305,4334,-82),Vector(3007,4358,-218),Vector(3007,4677,-218),Vector(3237,4601,-218),Vector(3101,4812,54),Vector(3305,4569,54),Vector(2612,4657,54)})
+AddProperty("basewars_downtown_v2a", "Warehouse 3", {Vector(4954.91015625,3206.7199707031,-141.71899414063),Vector(4954.91015625,3300.7199707031,-141.71899414063),Vector(5112,3161.9099121094,-142)})
+AddProperty("basewars_downtown_v2a", "Balcony House", {Vector(3675,2485,-142),Vector(3511,2127,-141.71899414063),Vector(3625,2127,-8.71875),Vector(3631,2379,-8.71875)})
+AddProperty("basewars_downtown_v2a", "Large House", {Vector(1795,2807,-142),Vector(2223,2709,-142)})
+AddProperty("basewars_downtown_v2a", "Warehouse 4", {Vector(2163,1855,-142),Vector(2137,1665,-142),Vector(2172,923,-138),Vector(2045,921,-142)})
+AddProperty("basewars_downtown_v2a", "Substation 1", {Vector(2793,1035,-142)})
+AddProperty("basewars_downtown_v2a", "Small House 1", {Vector(2786,787,-141.71899414063)})
+AddProperty("basewars_downtown_v2a", "Small House 2", {Vector(2419,462,-141.71899414063)})
+AddProperty("basewars_downtown_v2a", "Beach House 1", {Vector(2377,-2263,-141.71899414063)})
+AddProperty("basewars_downtown_v2a", "Beach House 2", {Vector(2376,-1454,-141.71899414063)})
+AddProperty("basewars_downtown_v2a", "Substation 2", {Vector(2377,-1639,-142)})
+AddProperty("basewars_downtown_v2a", "Starlines", {Vector(955,-1487.9100341797,-141.71899414063),Vector(861,-1487.9100341797,-141.71899414063),Vector(815.90899658203,-1645,-141.71899414063),Vector(360.48999023438,-1946,-78)})
+AddProperty("basewars_downtown_v2a", "Long Apartment", {Vector(-235,-2162,-97),Vector(-326,-2533,-97),Vector(-326,-2769,-97)})
+AddProperty("basewars_downtown_v2a", "Train", {Vector(-124.51000213623,-1921,-364),Vector(-582.51000976563,-1921,-364),Vector(-582.51000976563,-2035,-364),Vector(-124.51000213623,-2035,-364)})
+--AddProperty("basewars_downtown_v2a", "", {})

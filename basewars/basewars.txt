@@ -1,0 +1,7 @@
+"Gamemode"
+{
+	"base"		"sandbox"
+	"title"		"basewars"
+	"menusystem"	"1"
+	"maps"		"^rp_downtown_v4c_mg_bw"	
+}

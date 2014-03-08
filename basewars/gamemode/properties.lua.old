@@ -1,0 +1,81 @@
+local emeta, pmeta = FindMetaTable("Entity"),FindMetaTable("Player")
+local DoorType = {"func_door","prop_door_rotating","func_door_rotating"}
+
+
+function emeta:IsDoor()
+	return table.HasValue(DoorType, self:GetClass())
+end
+
+function DoorsSetup()
+	for k,v in pairs (ents.GetAll()) do
+		if table.HasValue(DoorType, v:GetClass()) then
+			v:SetNWInt("State", 0)
+			for a,b in pairs(Properties[game.GetMap()]) do
+				if table.HasValue(b, v:GetPos()) then
+					v:SetNWString("Property", a)
+					v:SetNWInt("Price", #b*PPrice)
+				end
+			end
+		end
+	end
+end	
+
+
+hook.Add("InitPostEntity", "SetupEnts", function()
+DoorsSetup()
+end)
+
+
+function pmeta:DoorControl()
+	local pos = self:GetShootPos()
+	local ang = self:GetAimVector()
+	local trd = {}
+	trd.start = pos
+	trd.endpos = pos+(ang*120)
+	trd.filter = self
+	local tr = util.TraceLine(trd)
+	if tr.HitNonWorld then
+	local tar = tr.Entity
+	if !tar then return end
+	if !table.HasValue(DoorType, tar:GetClass()) then return end
+		if tar:GetNWInt("State") == 0 and !self.ODR then
+			tar:SetNWInt("State", 1)
+			tar:SetNWEntity("DOwner", self)
+			self:AddMoney(-tar:GetNWInt("Price", 1))
+			self:PrintMessage( HUD_PRINTTALK, "You just purchased "..tar:GetNWInt("Price", PPrice)/PPrice.." Doors at a cost of $"..tar:GetNWInt("Price", PPrice))
+			self.ODR = true
+		if tar:GetNWString("Property") == nil or tar:GetNWString("Property") == "" then
+			--
+		else 
+			for k,v in pairs(ents.GetAll()) do
+				if v:GetNWString("Property") == tar:GetNWString("Property") then
+					v:SetNWInt("State", 1)
+					v:SetNWEntity("DOwner", self)
+				end
+			end
+		end
+	elseif tar:GetNWInt("State") == 1 and tar:GetNWEntity("DOwner") == self then
+		tar:SetNWInt("State", 0)
+		tar:SetNWEntity("DOwner", nil)
+			self:AddMoney(math.floor(tar:GetNWInt("Price", 1)/1.75))
+		self:PrintMessage( HUD_PRINTTALK, "You just sold "..tar:GetNWInt("Price", PPrice)/PPrice.." Doors for $"..math.floor(tar:GetNWInt("Price", 100)/1.75))
+		self.ODR = false
+	for k,v in pairs(ents.GetAll()) do
+		if v:GetNWString("Property") == tar:GetNWString("Property") then
+			v:SetNWInt("State", 0)
+			v:SetNWEntity("DOwner", nil)
+		end
+	end
+end
+end
+end
+
+hook.Add("PlayerDisconnect", "DoorClearup", function(ply)
+	for k,v in pairs(ents.GetAll()) do
+		if !table.HasValue(DoorType, v:GetClass()) then continue end
+		if v:GetNWInt("State") == 1 and v:GetNWEntity("DOwner") == ply then
+			v:SetNWInt("State", 0)
+			v:SetNWEntity("DOwner", nil)
+		end
+	end
+end)

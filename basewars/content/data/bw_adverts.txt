@@ -1,0 +1,43 @@
+// Keys:
+//   {HOSTNAME}
+//   {TIMELIMIT}
+//   {TIMELEFT}
+//   {FRAGLIMIT}
+//   {SERVERTIME}
+//   {CURRENTMAP}
+//   {NEXTMAP}
+//
+// Colors:
+//   1  = White
+//   2  = Grey
+//   3  = Red
+//   4  = Green
+//   5  = Blue
+//   6  = Yellow
+//   7  = Orange
+//   8  = Teal
+//   9  = Aqua
+//   10 = Violet
+//
+// Console Command 'sh_reloadadverts' reloads this file into the advert system.
+
+1;Press F1 to open the help menu.
+1;It's a good idea to read the rules before playing.
+4;You are currently playing {HOSTNAME}. Enjoy your stay.
+7;It's a good idea to create a spawnpoint at your base.
+9;Found a bug? Please report any bugs to an appropriate admin or moderator.
+10;Making factions is the best way to earn money. Set up a base and then go raid!
+1;If you want to create a faction, press F4.
+6;Go check out our forums at http://lrg.site.nfoservers.com/
+7;You need a level 2 Radar Tower to raid others.
+4;Help the server grow! Spread the word! Get as many active players as you can!
+3;You MUST have a base with silver+ printers to raid others.
+9;Improvements will be coming at a steady rate, and bug fixes will be applied!
+1;Inviting friends and spreading the word is an easy way to help us out :)
+7;You are able to buy money and admin privileges for this server.
+4;Remember to setup kill lines/zones outside your base if you want to kill them there.
+3;Please don't raid people that lack silver+ printers.
+10;Please don't write words with the rope/elastic tools.
+6;Please include 3 standard ASCII characters in your name so players can /scan you.
+6;You can customize your character! Press F3 to begin.
+3;Please don't RDM.
