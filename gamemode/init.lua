@@ -429,11 +429,11 @@ function GM:RaidSystemConfirm(ply,args)
 	if(target != NULL) then
 		if(args[2] != (""..target:Team()..","..ply:Team()..","..target:SteamID()..","..ply:SteamID())) then
 			ply:PrintMessage(HUD_PRINTCONSOLE,"Encryption Key did not match")
+			
 			return
 		end
 		//Broadcast that the player has initiated a war against the target.
 		//MsgAll("BaseWars: Player " .. ply:Nick() .. " has initiated a raid against " .. target:Nick() .. "!\n")
-		
 		for k,v in pairs(player.GetAll()) do
 			//v:PrintMessage(HUD_PRINTCONSOLE,"BaseWars: Player " .. ply:Nick() .. " has initiated a raid against " .. target:Nick() .. "!")
 			//v:PrintMessage(HUD_PRINTCONSOLE,"  Factions Involved:\n")

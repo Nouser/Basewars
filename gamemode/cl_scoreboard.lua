@@ -19,7 +19,7 @@ end
 local basename = surface.GetTextureID("lmaollama/basewars/scoreboard/name");
 local head = surface.GetTextureID("lmaollama/basewars/scoreboard/llheadertexture");
 local bg = surface.GetTextureID("lmaollama/basewars/scoreboard/llbgtexture");
-local logo = surface.GetTextureID("lmaollama/basewars/scoreboard/lrglogo");
+local logo = surface.GetTextureID("tig/tiglogo");
 
 function GM:GetTeamScoreInfo()
 
@@ -152,7 +152,8 @@ function GM:HUDDrawScoreBoard()
 	
 	-- Draw the logo. i'm literally just guessing on this. these numbers mean absolutely nothing to me. guess and check, guess and check...
 	surface.SetDrawColor(255,255,255,255);
-	surface.SetTexture(logo);
+	surface.SetTextPos( boardx1+40, boardy1+30)
+	surface.DrawText("To Infinity Gaming")
 	surface.DrawTexturedRect(boardx1, boardy1 + 21, 486, 76);
 	
 	-- THE MIGHTY Outline

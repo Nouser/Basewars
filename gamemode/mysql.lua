@@ -4,10 +4,10 @@ Basewars MYSQL wrapper built by lrg
 ]]
 
 CINFO = {}// code by lrg
-CINFO.Hostname = "sql3.freesqldatabase.com"
-CINFO.Username = "sql330831"
-CINFO.Password = "uH3*bY7!"// code by lrg
-CINFO.Database = "sql330831"
+CINFO.Hostname = "zzs.site.nfoservers.com"
+CINFO.Username = "nouser76_bw"
+CINFO.Password = "yRgSPS)#3z]%"// code by lrg
+CINFO.Database = "nouser76_money"
 
 require("mysqloo")
 if !mysqloo then

@@ -3290,7 +3290,7 @@ function BuyAmmo( ply, command, args )
 			return ""
 		end
 		if type == "grenadeammo" then
-		ply:GiveAmmo(3, 36)
+			ply:GiveAmmo(3, "40MM_HE")
 			ply:AddMoney( CfgVars["ammo40MMcost"] * -1 );
 			Notify( ply, 0, 3, "You bought " ..CfgVars["ammo40MMamount"].. " 40MM HE ammo for $" ..CfgVars["ammo40MMcost"].. " ." );
 			return ""
@@ -3301,7 +3301,7 @@ AddChatCommand( "/buyammo", BuyAmmo );
 concommand.Add("buyammo", BuyAmmo)
 
 function Buy40MMAmmo ( ply )
-			ply:GiveAmmo(3, 36)
+			ply:GiveAmmo(5, 1)
 			ply:AddMoney( CfgVars["ammo40MMcost"] * -1 );
 			Notify( ply, 0, 3, "You bought " ..CfgVars["ammo40MMamount"].. " 40MM HE ammo for $" ..CfgVars["ammo40MMcost"].. " ." );
 			return ""

@@ -25,7 +25,6 @@ function GM:PlayerSay( ply, text )
 	*/
 	if(subArgs[1] != nil) then
 		if(string.lower(subArgs[1]) == "!raidpanel") then
-			if(ply:GetUserGroup() == "moderator" || ply:GetUserGroup() == "junior moderator" || ply:GetUserGroup() == "admin" || ply:GetUserGroup() == "junior admin" || ply:GetUserGroup() == "developer" || ply:GetUserGroup() == "founder" || ply:GetUserGroup() == "community manager" || ply.GetUserGroup() == "superadmin") then
 				//Send Ongoing Raids Info in the form of, Raided, Raider, Target Index.
 				//Then Send the command to open up the panel.
 				ply:SendLua("GAMEMODE:RaidPanelClear()")
@@ -33,13 +32,9 @@ function GM:PlayerSay( ply, text )
 					ply:SendLua("GAMEMODE:RaidPanelGet("..v.Raided..","..v.Raider..","..v.TargetIndex..","..(v.StartTime - CurTime())..","..k..")")
 				end
 				ply:SendLua("GAMEMODE:RaidPanelOpen(0)")
-				
-			else
-				ply:PrintMessage(HUD_PRINTTALK,"Error! You have insufficient permissions.")
-				return ""
-			end
+
 		elseif(string.lower(subArgs[1]) == "!raidremove") then
-			if(ply:GetUserGroup() == "moderator" || ply:GetUserGroup() == "junior moderator" || ply:GetUserGroup() == "admin" || ply:GetUserGroup() == "junior admin" || ply:GetUserGroup() == "developer" || ply:GetUserGroup() == "founder" || ply:GetUserGroup() == "community manager") then
+			if(ply:GetUserGroup() == "moderator" || ply:GetUserGroup() == "junior moderator" || ply:GetUserGroup() == "admin" || ply:GetUserGroup() == "junior admin" || ply:GetUserGroup() == "developer" || ply:GetUserGroup() == "founder" || ply:GetUserGroup() == "community manager" || ply:GetUserGroup() == "super admin" || ply:GetUserGroup() == "superadmin") then
 				if(subArgs[2] == nil) then
 					ply:PrintMessage(HUD_PRINTTALK,"Argument 1, number expected.. got nil.")
 					return ""
